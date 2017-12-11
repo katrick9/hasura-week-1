@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input</title>
+</head>
+<body>
+  <h1>Input</h1>
+  <div id="Input_area">
+  <input type="text" id = "myTextArea" placeholder="comments">
+  <br/><br/>
+  <input  type="submit" id="login_btn" value="POST" onclick= "
+  var request= new XMLHttpRequest();
+  var myTextArea= document.getElementById('myTextArea').value;
+  request.open('POST','/int',true);
+  request.setRequestHeader('Content-Type','application/json');
+  request.send(JSON.stringify({myTextArea:myTextArea}));">
+  </div>
+</body>
+</html>
